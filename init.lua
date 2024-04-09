@@ -186,9 +186,8 @@ vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left wind
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
-vim.keymap.set('n', '<C-\\>', '<cmd>vsplit<CR>', {desc = 'Split vertically'})
-vim.keymap.set('n', '<C-/>', '<cmd>split<CR>', {desc = 'Split horizontally'})
-
+vim.keymap.set('n', '<C-/>', '<cmd>vsplit<CR>', { desc = 'Split vertically' })
+vim.keymap.set('n', '<C-\\>', '<cmd>split<CR>', { desc = 'Split horizontally' })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
@@ -542,7 +541,10 @@ require('lazy').setup({
       local servers = {
         -- clangd = {},
         -- gopls = {},
-        pyright = {},
+        pyright = {
+          { autoImportCompletion = true },
+          python = { analysis = { autoSearchPaths = true, diagnosticMode = 'openFilesOnly', useLibraryCodeForTypes = true, typeCheckingMode = 'off' } },
+        },
         docker_compose_language_service = {},
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
@@ -551,8 +553,7 @@ require('lazy').setup({
         --    https://github.com/pmizio/typescript-tools.nvim
         --
         -- But for many setups, the LSP (`tsserver`) will work just fine
-        -- tsserver = {},
-        --
+        tsserver = {},
 
         lua_ls = {
           -- cmd = {...},
