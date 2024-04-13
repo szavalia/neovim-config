@@ -32,7 +32,7 @@ return {
 
     vim.keymap.set('n', '<leader>hm', function()
       harpoon.ui:toggle_quick_menu(harpoon:list())
-    end)
+    end, {desc = 'Show Harpoon marks'})
 
     vim.keymap.set('n', '<leader>ha', function()
       harpoon:list():add()
