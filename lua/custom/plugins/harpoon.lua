@@ -44,7 +44,7 @@ return {
     end, { desc = 'Navigate to next file in list' })
 
     vim.keymap.set('n', '<leader>hp', function()
-      harpoon:list():previous()
+      harpoon:list():prev()
     end, { desc = 'Navigate to previous file in list' })
 
     -- Open marks by number
