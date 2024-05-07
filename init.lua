@@ -101,7 +101,7 @@ vim.g.have_nerd_font = true
 vim.opt.number = true
 -- You can also add relative line numbers, for help with jumping.
 --  Experiment for yourself to see if you like it!
--- vim.opt.relativenumber = true
+vim.opt.relativenumber = true
 
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = 'a'
@@ -149,6 +149,12 @@ vim.opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
+
+-- Set textwidth to 80 columns
+vim.opt.textwidth = 80
+
+-- Set column marker at 80th column
+vim.opt.colorcolumn = "80"
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
