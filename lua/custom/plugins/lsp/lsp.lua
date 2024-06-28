@@ -151,7 +151,7 @@ return {
           init_options = {
             preferences = {
               disableSuggestions = true,
-            }
+            },
           },
           commands = {
             OrganizeImports = {
@@ -206,9 +206,10 @@ return {
       -- for you, so that they are available from within Neovim.
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
+        'luacheck', -- Used to lint lua code
         'stylua', -- Used to format lua code
         'lua-language-server', -- Used for lua completion
-        'eslint-lsp', -- Used to lint javascript/typescript
+        'eslint_d', -- Used to lint javascript/typescript
         'typescript-language-server', -- Used for typescript completion
         'js-debug-adapter', -- Used for javascript debugging
         'node-debug2-adapter', -- Used for node debugging
@@ -294,7 +295,7 @@ return {
           -- Accept ([y]es) the completion.
           --  This will auto-import if your LSP supports it.
           --  This will expand snippets if the LSP sent a snippet.
-          ['<C-y>'] = cmp.mapping.confirm { select = true },
+          ['<Enter>'] = cmp.mapping.confirm { select = true },
 
           -- Manually trigger a completion from nvim-cmp.
           --  Generally you don't need this, because nvim-cmp will display

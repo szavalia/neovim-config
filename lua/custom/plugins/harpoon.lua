@@ -32,7 +32,7 @@ return {
 
     vim.keymap.set('n', '<leader>hm', function()
       harpoon.ui:toggle_quick_menu(harpoon:list())
-    end, {desc = 'Show Harpoon marks'})
+    end, { desc = 'Show Harpoon marks' })
 
     vim.keymap.set('n', '<leader>ha', function()
       harpoon:list():add()
@@ -47,7 +47,7 @@ return {
       harpoon:list():prev()
     end, { desc = 'Navigate to previous file in list' })
 
-    -- Open marks by number
+    -- Open marks 1-4 fast
     vim.keymap.set('n', '<leader>hh', function()
       harpoon:list():select(1)
     end, { desc = 'Jump to tag 1' })
@@ -60,6 +60,23 @@ return {
     vim.keymap.set('n', '<leader>hl', function()
       harpoon:list():select(4)
     end, { desc = 'Jump to tag 4' })
+
+    -- Open marks by number (5-9)
+    vim.keymap.set('n', '<leader>h5', function()
+      harpoon:list():select(5)
+    end, { desc = 'Jump to tag 5' })
+    vim.keymap.set('n', '<leader>h6', function()
+      harpoon:list():select(6)
+    end, { desc = 'Jump to tag 6' })
+    vim.keymap.set('n', '<leader>h7', function()
+      harpoon:list():select(7)
+    end, { desc = 'Jump to tag 7' })
+    vim.keymap.set('n', '<leader>h8', function()
+      harpoon:list():select(8)
+    end, { desc = 'Jump to tag 8' })
+    vim.keymap.set('n', '<leader>h9', function()
+      harpoon:list():select(9)
+    end, { desc = 'Jump to tag 9' })
 
     -- Extend harpoon UI
     harpoon:extend {
