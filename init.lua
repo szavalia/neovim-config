@@ -151,10 +151,10 @@ vim.opt.cursorline = true
 vim.opt.scrolloff = 10
 
 -- Set textwidth to 80 columns
-vim.opt.textwidth = 80
+-- vim.opt.textwidth = 80
 
 -- Set column marker at 80th column
-vim.opt.colorcolumn = '80'
+-- vim.opt.colorcolumn = '80'
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
