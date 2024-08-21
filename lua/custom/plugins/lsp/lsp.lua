@@ -212,8 +212,6 @@ return {
         'lua-language-server', -- Used for lua completion
         'eslint_d', -- Used to lint javascript/typescript
         'typescript-language-server', -- Used for typescript completion
-        'js-debug-adapter', -- Used for javascript debugging
-        'node-debug2-adapter', -- Used for node debugging
         'prettier', -- Used for javascript/typescript formatting
         'dockerfile-language-server', -- Used for dockerfile completion
         'docker-compose-language-service', -- Used for docker-compose completion
