@@ -139,7 +139,6 @@ return {
           { autoImportCompletion = true },
           python = { analysis = { autoSearchPaths = true, diagnosticMode = 'openFilesOnly', useLibraryCodeForTypes = true, typeCheckingMode = 'off' } },
         },
-        docker_compose_language_service = {},
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
@@ -210,13 +209,18 @@ return {
         'luacheck', -- Used to lint lua code
         'stylua', -- Used to format lua code
         'lua-language-server', -- Used for lua completion
+
         'eslint_d', -- Used to lint javascript/typescript
         'typescript-language-server', -- Used for typescript completion
         'prettier', -- Used for javascript/typescript formatting
+
         'dockerfile-language-server', -- Used for dockerfile completion
         'docker-compose-language-service', -- Used for docker-compose completion
+
         'gopls', -- Used for golang completion
+        'golangci-lint', -- Used for golang linting
         'delve', -- Used for golang debugging
+
         'pyright', -- Used for python completion
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
