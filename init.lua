@@ -419,7 +419,8 @@ require('lazy').setup({
     -- 'folke/tokyonight.nvim',
     -- 'sainnhe/sonokai',
     -- 'projekt0n/github-nvim-theme',
-    'https://github.com/ellisonleao/gruvbox.nvim',
+    -- 'https://github.com/ellisonleao/gruvbox.nvim',
+    'catppuccin/nvim',
     priority = 1000, -- make sure to load this before all the other start plugins
     init = function()
       -- Load the colorscheme here.
@@ -428,13 +429,10 @@ require('lazy').setup({
       -- vim.cmd.colorscheme 'tokyonight'
       -- vim.cmd.colorscheme 'sonokai'
       -- vim.cmd.colorscheme 'github_dark'
-      vim.cmd.colorscheme 'gruvbox'
-
-      -- You can configure highlights by doing something like
-      vim.cmd.hi 'Comment gui=none'
+      -- vim.cmd.colorscheme 'gruvbox'
+      vim.cmd.colorscheme 'catppuccin-mocha'
     end,
   },
-
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
 
