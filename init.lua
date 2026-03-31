@@ -307,6 +307,8 @@ require('lazy').setup({
         { '<leader>r_', hidden = true },
         { '<leader>s', group = '[S]earch' },
         { '<leader>s_', hidden = true },
+        { '<leader>t', group = '[T]est' },
+        { '<leader>t_', hidden = true },
       }
     end,
   },
