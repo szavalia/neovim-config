@@ -299,8 +299,6 @@ require('lazy').setup({
       wk.add {
         { '<leader>c', group = '[C]ode' },
         { '<leader>c_', hidden = true },
-        { '<leader>d', group = '[D]ebugger' },
-        { '<leader>d_', hidden = true },
         { '<leader>h', group = '[H]arpoon' },
         { '<leader>h_', hidden = true },
         { '<leader>r', group = '[R]ename' },
