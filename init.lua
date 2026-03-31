@@ -170,6 +170,21 @@ vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagn
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Show diagnostic [E]rror messages' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
+-- Configure diagnostics to not use sign column (gitsigns uses it instead)
+-- Diagnostics are still visible via virtual text, underlines, and floating windows
+vim.diagnostic.config {
+  signs = false,
+  -- Uncomment below to re-enable diagnostic signs in the sign column
+  -- signs = {
+  --   text = {
+  --     [vim.diagnostic.severity.ERROR] = 'E',
+  --     [vim.diagnostic.severity.WARN] = 'W',
+  --     [vim.diagnostic.severity.INFO] = 'I',
+  --     [vim.diagnostic.severity.HINT] = 'H',
+  --   },
+  -- },
+}
+
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
 -- is not what someone will guess without a bit more experience.
