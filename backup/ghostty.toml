@@ -1,0 +1,15 @@
+theme = catppuccin-mocha
+
+cursor-style = block
+cursor-style-blink = true
+shell-integration-features = no-cursor
+
+keybind = global:cmd+ctrl+grave_accent=toggle_quick_terminal
+quick-terminal-position = center
+
+# Panes
+keybind = shift+ctrl+h=goto_split:left
+keybind = shift+ctrl+j=goto_split:bottom
+keybind = shift+ctrl+k=goto_split:top
+keybind = shift+ctrl+l=goto_split:right
+keybind = super+z=toggle_split_zoom
